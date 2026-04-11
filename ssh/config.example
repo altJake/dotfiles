@@ -1,0 +1,11 @@
+# SSH config template
+# Copy to ~/.ssh/config (this file is not auto-symlinked).
+#
+# Note: ~/.ssh/config is not managed by dotfiles to avoid overwriting
+# machine-specific host entries. Use this as a starting template.
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  ServerAliveInterval 60
+  ServerAliveCountMax 3

@@ -30,6 +30,25 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+# Dock: auto-hide, small size, bottom position.
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock orientation -string "bottom"
+
+# Trackpad: enable tap to click.
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+
+# Trackpad: natural scroll direction.
+defaults write NSGlobalDomain com.apple.swipescrolldirection -bool true
+
+# Screenshots: save PNG files to ~/Screenshots.
+defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
+defaults write com.apple.screencapture type -string "png"
+mkdir -p "${HOME}/Screenshots"
+
 # Hide Safari's bookmark bar.
 defaults write com.apple.Safari.plist ShowFavoritesBar -bool false
 
