@@ -20,6 +20,7 @@ brew 'git-lfs'
 # Languages & runtimes
 brew 'go'             # Golang
 brew 'nvm'            # Node version manager
+brew 'yarn'           # JavaScript package manager
 
 # Docker (using Colima as a lightweight alternative to Docker Desktop)
 brew 'colima'
