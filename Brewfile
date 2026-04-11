@@ -48,6 +48,7 @@ brew 'spaceman-diff'  # image diffs in git
 # -- Applications --
 
 cask 'font-jetbrains-mono-nerd-font'
+cask 'google-cloud-sdk'
 cask 'alfred'             # launcher
 cask 'claude-code'
 cask 'google-chrome'
