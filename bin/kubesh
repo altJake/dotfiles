@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+# Shell into a Kubernetes pod.
+#
+# Usage: kubesh <pod> [shell]
+#
+# Defaults to `sh` if no shell is specified. Works with any shell
+# available in the container (bash, sh, env, db, etc).
+#
+# See also: kshl (shell into pod by label) in kubernetes/functions.zsh
+
+if [ ${#@} -lt 1 ]; then
+  echo "usage: kubesh <pod> [shell]"
+  exit 1
+fi
+
+SHELL="sh"
+if [ ${#@} -gt 1 ]; then
+  SHELL=${@:2}
+fi
+
+kubectl exec -it ${1} -- ${SHELL}

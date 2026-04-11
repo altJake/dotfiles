@@ -30,6 +30,7 @@ brew 'docker-compose'
 # Kubernetes
 brew 'kubernetes-cli'
 brew 'kubectx'        # kubectl context/namespace switcher
+brew 'krew'           # kubectl plugin manager
 
 # Databases
 brew 'pgcli'          # Postgres CLI with autocomplete

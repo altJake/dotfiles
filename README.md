@@ -31,7 +31,19 @@ Docker is set up using [Colima](https://github.com/abiosoft/colima) as a lightwe
 colima start
 ```
 
-## ssh
+## ssh keys
+
+On a new machine, generate a new SSH key and add it to GitHub:
+
+```sh
+ssh-keygen -t ed25519 -C "your@email.com"
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+Then add `~/.ssh/id_ed25519.pub` to [github.com/settings/keys](https://github.com/settings/keys).
+
+## ssh config
 
 An SSH config template lives at `ssh/config.example`. Copy it to `~/.ssh/config` as a starting point — it is intentionally not auto-symlinked to preserve machine-specific host entries.
 
