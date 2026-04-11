@@ -6,12 +6,12 @@ tap 'homebrew/bundle'
 brew 'coreutils'      # GNU coreutils (gls, gdate, etc)
 brew 'bat'            # better cat
 brew 'fzf'            # fuzzy finder
+brew 'gawk'           # GNU awk (more capable than macOS awk)
 brew 'gnu-sed'        # GNU sed
 brew 'grep'           # GNU grep
 brew 'httpie'         # HTTP client
 brew 'jq'             # JSON processor
 brew 'watch'          # watch command
-brew 'wget'
 
 # Version control
 brew 'git'
@@ -34,16 +34,18 @@ brew 'kubectx'        # kubectl context/namespace switcher
 # Databases
 brew 'pgcli'          # Postgres CLI with autocomplete
 
+# GPG
+brew 'gnupg'
+brew 'pinentry-mac'
+
 # Shell enhancements
 brew 'atuin'          # shell history sync
 brew 'starship'       # cross-shell prompt
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
-# Media & utilities
+# Media
 brew 'ffmpeg'
-brew 'imagemagick'
-brew 'spaceman-diff'  # image diffs in git
 
 # -- Applications --
 

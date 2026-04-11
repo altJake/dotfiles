@@ -1,0 +1,16 @@
+#compdef kubesh
+
+_kubesh () {
+  local state
+
+  _arguments \
+    '1: :->pods' \
+    '2: :->cmd'
+
+  case $state in
+    (pods) _arguments '1:pods:($(kubectl get pods -o=jsonpath="{range .items[*]}{.metadata.name}{\" \"}{end}"))' ;;
+    (cmd) compadd "$@" db bash sh env
+  esac
+}
+
+_kubesh "$@"

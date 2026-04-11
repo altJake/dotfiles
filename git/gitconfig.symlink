@@ -56,9 +56,6 @@
 [difftool]
   prompt = false
 
-[diff "spaceman-diff"]
-  command = /opt/homebrew/bin/spaceman-diff
-
 [help]
   autocorrect = 1
 
