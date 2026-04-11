@@ -1,0 +1,74 @@
+{
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.tabSize": 2,
+  "editor.multiCursorModifier": "alt",
+  "editor.renderWhitespace": "boundary",
+  "editor.largeFileOptimizations": false,
+
+  "workbench.colorTheme": "Monokai",
+  "workbench.startupEditor": "newUntitledFile",
+
+  "breadcrumbs.enabled": true,
+  "extensions.ignoreRecommendations": false,
+  "security.workspace.trust.untrustedFiles": "open",
+
+  "prettier.configPath": ".prettierrc",
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "vscode.json-language-features" },
+
+  "html.format.templating": true,
+  "html.format.wrapLineLength": 80,
+
+  "files.associations": {
+    "*.pgsql": "sql",
+    "*.mjml": "html"
+  },
+
+  "go.useLanguageServer": true,
+  "go.buildOnSave": "off",
+
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+
+  "SQL-Formatter-VSCode.dialect": "postgresql",
+  "SQL-Formatter-VSCode.keywordCase": "upper",
+  "SQL-Formatter-VSCode.functionCase": "upper",
+  "SQL-Formatter-VSCode.dataTypeCase": "upper",
+  "SQL-Formatter-VSCode.linesBetweenQueries": 2,
+
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "gitlens.views.repositories.location": "scm",
+  "gitlens.views.fileHistory.location": "explorer",
+  "gitlens.views.lineHistory.location": "explorer",
+  "gitlens.views.compare.location": "gitlens",
+  "gitlens.views.search.location": "gitlens",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+
+  "cSpell.enableFiletypes": [
+    "asciidoc", "c", "cpp", "csharp", "css", "dockerfile",
+    "git-commit", "go", "handlebars", "haskell", "html", "jade",
+    "java", "javascript", "javascriptreact", "json", "jsonc",
+    "latex", "less", "markdown", "mdx", "php", "plaintext",
+    "pug", "python", "restructuredtext", "rust", "scala",
+    "scss", "shellscript", "text", "typescript", "typescriptreact",
+    "yaml", "yml"
+  ],
+  "cSpell.userWords": [
+    "acl", "ACLs", "apikeys", "apiv", "Archiver", "autofill",
+    "backend", "behaviour", "Cancellable", "codegen", "codemirror",
+    "commercetools", "Datagrid", "Deserialised", "featureflag",
+    "Geofence", "hacky", "Interp", "KPIs", "Mixpanel", "Organisation",
+    "Pendable", "Picklist", "prepend", "rolledback", "Rulebuilder",
+    "ruleset", "Rulesets", "SAML", "sdks", "SKUs", "stackable",
+    "Storyblok", "structs", "subledger", "subledgers", "transpile",
+    "transpiled", "tsimporter", "uncategorized", "Undefinedable",
+    "uniquify", "Unmount", "unparse", "userflow", "UUID",
+    "webhook", "webhooks"
+  ]
+}
