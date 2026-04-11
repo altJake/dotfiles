@@ -1,6 +1,8 @@
---- 
-:update_sources: true
-:verbose: true
-:backtrace: false
-:benchmark: false
-gem: --no-document
+# Ruby gem config — not in active use.
+# Uncomment if Ruby development is needed.
+#
+# :update_sources: true
+# :verbose: true
+# :backtrace: false
+# :benchmark: false
+# gem: --no-document
