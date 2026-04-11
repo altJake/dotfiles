@@ -60,10 +60,8 @@ cask 'maccy'              # clipboard manager
 cask 'obsidian'           # notes
 cask 'rectangle'          # window manager
 cask 'slack'
-cask 'spotify'
 cask 'surfshark'          # VPN
 cask 'tableplus'          # database GUI
 cask 'telegram'
 cask 'visual-studio-code'
 cask 'zed'
-cask 'zoom'
