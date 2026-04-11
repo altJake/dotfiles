@@ -35,6 +35,12 @@ colima start
 
 An SSH config template lives at `ssh/config.example`. Copy it to `~/.ssh/config` as a starting point — it is intentionally not auto-symlinked to preserve machine-specific host entries.
 
+## fonts
+
+JetBrains Mono Nerd Font is installed via Brewfile. After install, set it manually in:
+- **iTerm2**: Preferences → Profiles → Text → Font
+- **VS Code / Zed**: set `"editor.fontFamily": "JetBrainsMono Nerd Font"` in settings
+
 ## updating
 
 Run `dot` from anywhere to pull the latest and re-apply dependencies.

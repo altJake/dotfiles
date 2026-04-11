@@ -1,0 +1,4 @@
+[main]
+timing = True
+table_format = psql
+keyring = True
