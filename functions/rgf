@@ -1,0 +1,18 @@
+#!/bin/zsh
+#
+# Interactive recursive search using grep + fzf.
+#
+# Type a search term, then fuzzy-filter the results. Selecting a match
+# opens it at the right line in $EDITOR.
+#
+# Usage: rgf [initial term]
+
+rgf() {
+  local result
+  result=$(grep -ri --color=always "${1:-.}" . | fzf --ansi --delimiter=: --nth=2..)
+  [ -n "$result" ] || return
+  local file line
+  file=$(echo "$result" | cut -d: -f1)
+  line=$(echo "$result" | cut -d: -f2)
+  $EDITOR "$file" "+$line"
+}
