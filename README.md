@@ -13,15 +13,76 @@ Everything is organized by topic area. Drop a new directory in and files are aut
 - **`topic/install.sh`** — run when you call `script/install`
 - **`topic/*.symlink`** — symlinked into `$HOME` on `script/bootstrap`
 
-## install
+## new machine setup
+
+### 1. Xcode Command Line Tools
 
 ```sh
-git clone https://github.com/altjake/dotfiles.git ~/.dotfiles
+xcode-select --install
+```
+
+### 2. SSH key
+
+Generate a key and add it to GitHub before running bootstrap — the gitconfig rewrites all GitHub traffic to SSH.
+
+```sh
+ssh-keygen -t ed25519 -C "your@email.com"
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
+
+Add `~/.ssh/id_ed25519.pub` to [github.com/settings/keys](https://github.com/settings/keys), then verify:
+
+```sh
+ssh -T git@github.com
+```
+
+### 3. Clone and bootstrap
+
+```sh
+git clone https://github.com/altJake/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 script/bootstrap
 ```
 
-This will symlink the appropriate files into your home directory and install Homebrew dependencies via the `Brewfile`.
+Bootstrap will:
+- Symlink all `*.symlink` files into `$HOME`
+- Prompt for your git author name and email
+- Install Homebrew and all packages from the `Brewfile`
+- Run all `install.sh` scripts
+- Apply macOS defaults
+
+### 4. Open a new terminal
+
+Required to pick up the new zsh config, starship prompt, and plugins.
+
+### 5. iTerm2 font
+
+Preferences → Profiles → Text → set font to `JetBrainsMono Nerd Font`.
+
+### 6. GPG signing key
+
+Add your signing key to `~/.gitconfig.local`:
+
+```ini
+[user]
+  signingkey = YOUR_KEY_ID
+```
+
+### 7. gcloud auth
+
+```sh
+gcloud auth login
+gcloud auth application-default login
+```
+
+### 8. kubectl contexts
+
+Copy or recreate `~/.kube/config` for your clusters.
+
+### 9. Log into apps
+
+Chrome, Slack, Telegram, TablePlus, etc.
 
 ## docker
 
