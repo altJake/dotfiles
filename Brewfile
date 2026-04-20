@@ -1,7 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap 'homebrew/bundle'
-
 # Core utilities
 brew 'coreutils'      # GNU coreutils (gls, gdate, etc)
 brew 'bat'            # better cat
