@@ -8,7 +8,7 @@ mkdir -p "$VSCODE_USER"
 ln -sf "$ZSH/vscode/settings.json" "$VSCODE_USER/settings.json"
 
 # Install extensions
-if (( $+commands[code] )); then
+if command -v code &>/dev/null; then
   while IFS= read -r extension; do
     [[ -z "$extension" || "$extension" == \#* ]] && continue
     code --install-extension "$extension" --force
