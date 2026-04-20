@@ -49,7 +49,7 @@ brew 'ffmpeg'
 # -- Applications --
 
 cask 'font-jetbrains-mono-nerd-font'
-cask 'google-cloud-sdk'
+cask 'gcloud-cli'
 cask 'alfred'             # launcher
 cask 'claude-code'
 cask 'google-chrome'
