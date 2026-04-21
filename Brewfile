@@ -40,6 +40,7 @@ brew 'pinentry-mac'
 # Shell enhancements
 brew 'atuin'          # shell history sync
 brew 'starship'       # cross-shell prompt
+brew 'zoxide'         # z — jump to frecent directories
 brew 'zsh-autosuggestions'
 brew 'zsh-syntax-highlighting'
 
