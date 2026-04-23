@@ -52,3 +52,9 @@ defaults write com.apple.screencapture location -string "${HOME}/Screenshots"
 defaults write com.apple.screencapture type -string "png"
 mkdir -p "${HOME}/Screenshots"
 
+# iTerm2: restore windows/tabs/panes on reopen.
+defaults write com.googlecode.iterm2 NoSyncIgnoreSystemWindowRestoration -bool false
+
+# System: keep windows when quitting apps (required for iTerm2 session restore).
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
+
