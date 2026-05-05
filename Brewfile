@@ -37,6 +37,10 @@ brew 'pgcli'          # Postgres CLI with autocomplete
 brew 'gnupg'
 brew 'pinentry-mac'
 
+# Formatters
+brew 'shfmt'          # shell script formatter (used by Zed)
+brew 'cspell'         # spell checker CLI (used by Zed cspell extension)
+
 # Shell enhancements
 brew 'atuin'          # shell history sync
 brew 'starship'       # cross-shell prompt
